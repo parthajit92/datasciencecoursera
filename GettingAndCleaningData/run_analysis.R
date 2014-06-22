@@ -89,4 +89,4 @@ for(sub in subjects) {
 names(averaged_test_train)<-column_names
 library(MASS)
 write.matrix(averaged_test_train, "averaged_test_train.txt",sep=", ")
-
+write.matrix(combined_test_train_mean, "combined_test_train_mean.txt",sep=", ")
