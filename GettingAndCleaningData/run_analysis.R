@@ -36,6 +36,7 @@ combined_test_train_mean[,2]<-activity_names[combined_test_train_mean[,2],2]
 
 
 # change column names to more human readable form
+
 column_names<-feature_names[columns_for_mean_values,2]
 column_names<-c("Subject", "Activity", as.character(column_names))
 column_names<-gsub("^t","Time of ", column_names)
@@ -49,7 +50,7 @@ column_names<-gsub("Mag"," Magnitude ", column_names)
 column_names<-gsub("Acc"," Acceleration ", column_names)
 column_names<-gsub("\\()","",column_names)
 column_names<-gsub("  "," ", column_names)
-
+column_names<-gsub(" ","_",column_names)
 #assign column names to data frame.
 names(combined_test_train_mean)<-column_names
 
